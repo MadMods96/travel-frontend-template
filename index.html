@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Travel - A view Outside</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <section class="Upper-Sec active" id="sec">
+        <header>
+            <h2 class="Title">Travel</h2>
+            <div id="tgl" class="toggle"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg></div>
+              <div id="tglc" class="toggle active"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg></div>
+              
+        </header>
+
+        <video src="/video.mov" muted loop autoplay></video>
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Never Stop</h2>
+            <h3>Exploring the World</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae numquam, nobis odio eveniet
+                voluptatem ab necessitatibus non reiciendis? Quae, nihil?</p>
+                <a href="#">Explore</a>
+        </div>
+        <ul class="Social-handels">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt=""></a></li>
+
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('sec').className="Upper-Sec";
+        document.getElementById('tglc').hidden=true;
+        let x = document.querySelector('.toggle')
+        x.addEventListener('click',() => {
+        document.getElementById('sec').className="Upper-Sec active";
+        document.getElementById('tgl').hidden=true;
+        document.getElementById('tglc').hidden=false;
+    });
+    let y = document.querySelector('.toggle.active')
+        y.addEventListener('click',() => {
+        document.getElementById('tgl').hidden=false;
+        document.getElementById('tglc').hidden=true;
+        document.getElementById('sec').className="Upper-Sec";
+    });
+    </script>
+
+</body>
+
+</html>
